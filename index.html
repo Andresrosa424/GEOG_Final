@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Influence of Agricultural Gradients on Population Trends of a Grassland Breeding Shorebird</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Andres N. Rosales</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Influence of Agricultural Gradients on
+Population Trends of a Grassland Breeding Shorebird</h1>
+
+</div>
+
+
+<p>Andres N. Rosales</p>
+<p>M.Sc. Candidate, University of Saskatchewan, Department of
+Biology</p>
+<p>Fall 2024</p>
+<div id="the-upland-sandpiper" class="section level1">
+<h1>The Upland Sandpiper</h1>
+<p>
+<img src="standing.jpg" style="float: right; margin-left: 10px; width: 200px;">
+The Upland Sandpiper (Bartramia longicauda) stands as an ode to the
+beauty and ecological significance of prairies and great plains of North
+America. A non-typical shorebird, inhabiting grasslands, rather than
+beaches, during the summers in North America. Characterized by their
+elongated neck, tall yellow legs, and distinctive ‘wolf whistle’ call
+they’re typically observed standing on fence posts. While a common
+observance for birders in the prairies, many have had a more difficult
+pursuit, especially in regions of imperil.
+</p>
+<p>During the breeding season, Upland Sandpipers encounter numerous
+threats linked to agricultural intensification and limited landscape
+diversity. The widespread conversion of rangelands to intensive
+row-cropping, particularly prevalent in the Great Plain and Prairie
+Pothole regions, poses a potential challenge for grassland shorebirds
+and may contribute to these species’ reliance to agriculture landscapes.
+These agriculturally intense areas are characterized by simplified
+landscapes, heightened pesticide use, and reduced ecosystem services
+almost serving as an ecological trap! While species use of agricultural
+landscapes has been extensively researched in passerine and gallinaceous
+birds, information on the impact of agriculture on grassland shorebirds,
+and the Upland Sandpiper, is lacking. Enhancing our understanding of how
+agricultural practices impact Upland Sandpiper, and other vulnerable
+grassland birds, is essential for developing effective management and
+conservation strategies in Saskatchewan’s agriculturally dominated
+landscapes.</p>
+<div style="text-align: center;">
+<p><img src="range.png"  style="width:400px;"></p>
+</div>
+</div>
+<div id="project-objectives" class="section level1">
+<h1>Project Objectives</h1>
+<p>Understanding agricultural factors influencing population trends is
+crucial for effective future conservation efforts for Upland Sandpiper.
+Landscape level factors, such as the composition and heterogeneity of
+agricultural lands are suspected to play a role in Upland Sandpiper
+population trends and their distribution across the landscape. Examining
+the impact of agriculture on population trends provides a better
+understanding of the variable threats this species encounters throughout
+their breeding range.</p>
+<div style="text-align: center;">
+<p><img src="upsa_ag.png" alt="AAFC land cover classifications within each eBird estimate" style="width:900px;"></p>
+</div>
+</div>
+<div id="datasets" class="section level1">
+<h1>Datasets</h1>
+<div id="community-science" class="section level2">
+<h2>Community Science</h2>
+<p>Evaluating avian status and trends is an ongoing effort for wildlife
+managers and conservation practitioners. Beginning as early as 1966, the
+<a
+href="https://www.canada.ca/en/environment-climate-change/services/bird-surveys/landbird/north-american-breeding/overview.html">Breeding
+Bird Survey</a> (commonly refer to as BBS) was the most intuitive way to
+measure broad scale changes in avian populations. This effort involves
+many volunteers across North America following a structured survey
+recording any and all bird observation. Using these data to evaluate
+status and trends, however, is challenging, and only provides broad
+scale patterns of population dynamics (province or country level).</p>
+<p>A recent, popular citizen science platform, <a
+href="https://ebird.org/home">eBird</a> follows a similar
+semi-structured survey effort and includes observations across North
+America. <a
+href="https://science.ebird.org/en/status-and-trends/species/uplsan/trends-map">eBird
+Status and Trends</a> is a recent product developed from the eBird team
+at Cornell University. Status and Trends reports seasonal abundance and
+the trend of that abundance over 11 years! Their method involves complex
+modeling and machine learning, accounting for confounding factors such
+as observer effects, environmental variables, and may others.</p>
+<p>For this project, I will use trend estimates for the Upland Sandpiper
+from eBird Status and Trends, during the breeding season. Trends are
+representative of 27km areas with information of the yearly abundance,
+trend in abundance, and 80% confidence intervals for each estimate.</p>
+<div style="text-align: left;">
+<p><img src="pixel.png" alt="AAFC land cover classifications within each eBird estimate" style="width:550px;"></p>
+</div>
+</div>
+<div id="land-cover-classifications" class="section level2">
+<h2>Land-cover classifications</h2>
+<p>To be able to identify the characteristics of each landscape where
+trends are estimated within, we need fine scale information on the types
+of land cover where population dynamics are operating. To accomplish
+this, we can use the Agriculture and Agri-Food Canada (AAFC) <a
+href="https://www.agr.gc.ca/atlas/apps/aef/main/index_en.html?AGRIAPP=23">Annual
+Crop Inventory (ACI)</a>. This data set classified major land cover
+types in Canada, with a focus on differentiating crop types (e.g.,
+canola, wheat, pulses, etc.).</p>
+<div style="text-align: center;">
+<p><img src="aafc.png" alt="AAFC land cover classifications within each eBird estimate" style="width:900px;"></p>
+</div>
+</div>
+</div>
+<div id="preliminary-results" class="section level1">
+<h1>Preliminary Results</h1>
+<p>
+<p>The comprehensive analyses for this chapter are still in progress. A
+final dataset has been compiled for an analysis of Upland Sandpiper
+trends in the Canadian prairies, allowing for initial exploratory
+analysis to be conducted. To assess spatial dependence of eBird trend
+pixels, I calculated and visualized Moran’s I for the spatial trends
+(Figure 1 and 2). This analysis confirms the presence of spatial
+autocorrelation in the estimates and reveals patterns in Upland
+Sandpiper population dynamics on the breeding grounds. Figure 1
+illustrates areas of high abundance near similar areas of high
+abundance, highlighting regions with high densities of the species.
+Figure 2 effectively illustrates the regional variation in population
+trends. These results indicates that Upland Sandpiper populations are
+increasing throughout majority of their range in Saskatchewan, Alberta,
+and Manitoba. Localized increases in the Great Plains of the U.S.
+suggest the possibility of a range contraction or northward range shift
+of the species. It’s important to note that these results are
+exploratory, and further robust statistical analysis are needed to draw
+sounds conclusions. Future analysis will focus on building candidate
+models with my predictor variables to answer the contraction hypothesis
+and the effect of agriculture activity on Upland Sandpiper.</p>
+<div style="display: flex; justify-content: space-between;">
+<figure style="text-align: center;">
+<img src="fig2.png" style="width: 350px;">
+<figcaption>
+Figure 2. High abundance estimates (red) near similar high abundance
+estimates.
+</figcaption>
+</figure>
+<figure style="text-align: center;">
+<img src="fig1.png" style="width: 350px;">
+<figcaption>
+Figure 1. Increasing trend estimates (red) near similar trend estimates
+</figcaption>
+</figure>
+</div>
+</p>
+</div>
+<div id="discussion" class="section level1">
+<h1>Discussion</h1>
+<p>In North America, the intensification of agriculture is widespread,
+posing many challenges to natural areas and those charged with managing
+them. Intensification of agriculture and a growing dependence on
+agrochemicals, to ensure a productive yield, has become a prevailing
+global phenomenon. Simplification of landscapes in agricultural regions
+of Canada has increased over the last two decades and is associated with
+larger field sizes, crops associated with higher agrochemical
+applications, and reduced landscape heterogeneity. In the United States,
+while total area devoted towards cropland is declining, agricultural
+systems have progressively transitioned to specialized farm
+consolidations and the homogenization of crop production. Additionally,
+Policies in northern regions of Canada and the United States support
+agricultural expansion through financial support and conversion of
+natural areas to agriculture, as food security in these regions is
+increasingly threatened. Agricultural intensification presents a complex
+challenge. While commodity cropping is important for ensuring food
+security, it often comes at an expense to ecosystem and wildlife health.
+Addressing this requires collaboration from conservationist, producers,
+and policy makers to ensure effective management and conservation of
+species, like the Upland Sandpiper, in these human-dominated
+landscapes.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
